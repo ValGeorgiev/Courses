@@ -3,11 +3,13 @@ All courses
 
 1. Telerik Academy
     
-    1.1 C# II
+    1.1 C# I
     
-    1.2 C# OOP
+    1.2 C# II
+    
+    1.3 C# OOP
 
-    1.3 JavaScript Applications
+    1.4 JavaScript Applications
   
 2. Soft uni
     
