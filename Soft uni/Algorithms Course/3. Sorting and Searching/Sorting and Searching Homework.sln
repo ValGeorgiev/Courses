@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem1. Insertion Sort", "Problem1. Insertion Sort\Problem1. Insertion Sort.csproj", "{E6DD9572-AB26-441F-91C4-7EDC30DE4892}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem3. Merge Sort", "Problem3. Merge Sort\Problem3. Merge Sort.csproj", "{2053DB7D-58A1-4645-929E-E70393BFD7A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem2. Interpolation Search", "Problem2. Interpolation Search\Problem2. Interpolation Search.csproj", "{9D86E0C9-FAB5-4DD3-AA18-D46E2B8E7E6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem5. Fisher-Yates Shuffle", "Problem5. Fisher-Yates Shuffle\Problem5. Fisher-Yates Shuffle.csproj", "{5D485CC9-9478-4139-94FF-729F576571A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem4. Heap Sort", "Problem4. Heap Sort\Problem4. Heap Sort.csproj", "{86540B69-1D8C-4BB8-A090-90D5BF0FA5E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsertionSort.Tests", "InsertionSort.Tests\InsertionSort.Tests.csproj", "{DACD4740-2EAA-4CA3-AD7E-FFE1635A9112}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E6DD9572-AB26-441F-91C4-7EDC30DE4892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6DD9572-AB26-441F-91C4-7EDC30DE4892}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6DD9572-AB26-441F-91C4-7EDC30DE4892}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6DD9572-AB26-441F-91C4-7EDC30DE4892}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2053DB7D-58A1-4645-929E-E70393BFD7A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2053DB7D-58A1-4645-929E-E70393BFD7A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2053DB7D-58A1-4645-929E-E70393BFD7A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2053DB7D-58A1-4645-929E-E70393BFD7A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D86E0C9-FAB5-4DD3-AA18-D46E2B8E7E6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D86E0C9-FAB5-4DD3-AA18-D46E2B8E7E6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D86E0C9-FAB5-4DD3-AA18-D46E2B8E7E6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D86E0C9-FAB5-4DD3-AA18-D46E2B8E7E6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D485CC9-9478-4139-94FF-729F576571A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D485CC9-9478-4139-94FF-729F576571A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D485CC9-9478-4139-94FF-729F576571A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D485CC9-9478-4139-94FF-729F576571A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86540B69-1D8C-4BB8-A090-90D5BF0FA5E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86540B69-1D8C-4BB8-A090-90D5BF0FA5E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86540B69-1D8C-4BB8-A090-90D5BF0FA5E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86540B69-1D8C-4BB8-A090-90D5BF0FA5E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DACD4740-2EAA-4CA3-AD7E-FFE1635A9112}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DACD4740-2EAA-4CA3-AD7E-FFE1635A9112}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DACD4740-2EAA-4CA3-AD7E-FFE1635A9112}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DACD4740-2EAA-4CA3-AD7E-FFE1635A9112}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
