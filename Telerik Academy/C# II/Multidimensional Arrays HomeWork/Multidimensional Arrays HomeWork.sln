@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem1. Fill the matrix", "Problem1. Fill the matrix\Problem1. Fill the matrix.csproj", "{FE5E5735-7144-447F-8697-49431DECF527}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem2. Fill the matrix", "Problem2. Fill the matrix\Problem2. Fill the matrix.csproj", "{167EEFBE-BD7F-430C-B630-BFC6AFB78D75}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE5E5735-7144-447F-8697-49431DECF527}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE5E5735-7144-447F-8697-49431DECF527}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE5E5735-7144-447F-8697-49431DECF527}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE5E5735-7144-447F-8697-49431DECF527}.Release|Any CPU.Build.0 = Release|Any CPU
+		{167EEFBE-BD7F-430C-B630-BFC6AFB78D75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{167EEFBE-BD7F-430C-B630-BFC6AFB78D75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{167EEFBE-BD7F-430C-B630-BFC6AFB78D75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{167EEFBE-BD7F-430C-B630-BFC6AFB78D75}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
