@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem1. Binomial Coefficients", "Problem1. Binomial Coefficients\Problem1. Binomial Coefficients.csproj", "{3033DA72-F215-46EA-AFDD-36312BB0C4E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem2. Longest Zigzag Subsequence", "Problem2. Longest Zigzag Subsequence\Problem2. Longest Zigzag Subsequence.csproj", "{4E37EC39-470C-4FFA-AC25-ABAC3AFF2EAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem3. Dividing Presents", "Problem3. Dividing Presents\Problem3. Dividing Presents.csproj", "{817D7F18-6ACF-43B3-B8D0-F441B3A86E14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem5. Representing a Sum with Limit", "Problem5. Representing a Sum with Limit\Problem5. Representing a Sum with Limit.csproj", "{469D67D7-7904-4834-B049-E7D0328ECEE0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3033DA72-F215-46EA-AFDD-36312BB0C4E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3033DA72-F215-46EA-AFDD-36312BB0C4E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3033DA72-F215-46EA-AFDD-36312BB0C4E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3033DA72-F215-46EA-AFDD-36312BB0C4E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E37EC39-470C-4FFA-AC25-ABAC3AFF2EAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E37EC39-470C-4FFA-AC25-ABAC3AFF2EAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E37EC39-470C-4FFA-AC25-ABAC3AFF2EAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E37EC39-470C-4FFA-AC25-ABAC3AFF2EAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{817D7F18-6ACF-43B3-B8D0-F441B3A86E14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{817D7F18-6ACF-43B3-B8D0-F441B3A86E14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{817D7F18-6ACF-43B3-B8D0-F441B3A86E14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{817D7F18-6ACF-43B3-B8D0-F441B3A86E14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{469D67D7-7904-4834-B049-E7D0328ECEE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{469D67D7-7904-4834-B049-E7D0328ECEE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{469D67D7-7904-4834-B049-E7D0328ECEE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{469D67D7-7904-4834-B049-E7D0328ECEE0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
