@@ -35,13 +35,9 @@ Schedule::Schedule(const Schedule& other){
 	}
 }
 
-void Schedule::printSchedule()const{
-	for (int i = 0; i < size; i++)
-	{
-		cout << "Physiotherapy " << i + 1 << endl;
-		physiotherapies[i].printPhysiotherapy();
-		cout << endl;
-	}
+void Schedule::printObjectsAndMaxObjects()const{
+	cout << "Objects : " << this->size << endl;
+	cout << "Max objects : " << this->MAX_CAPACITY << endl;
 }
 
 void Schedule::printPhysiotherapy(int index)const{
@@ -59,7 +55,7 @@ void Schedule::printPhysiotherapy(int index)const{
 //}
 
 void Schedule::setPhysiotherapy(int index, char* name, double price, int duration, int startTime){
-	cout << "You want to change physiotherapy!" << endl;
+	cout << "You changed physiotherapy!" << endl;
 	physiotherapies[index].setName(name);
 	physiotherapies[index].setPrice(price);
 	physiotherapies[index].setDuration(duration);
@@ -101,6 +97,9 @@ int main(){
 	today.addPhysiotherapy(newPhysio6);
 	today.addPhysiotherapy(newPhysio7);
 	today.addPhysiotherapy(newPhysio8);
-	today.printSchedule();
 	
+	today.setPhysiotherapy(0, "Change", 15, 2, 11);
+	today.printPhysiotherapy(0);
+	cout << endl;
+	today.printObjectsAndMaxObjects();
 }

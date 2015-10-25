@@ -15,7 +15,7 @@ public:
 	Schedule& operator=(const Schedule&);
 	Schedule(const Schedule&);
 
-	void printSchedule()const;
+	void printObjectsAndMaxObjects()const;
 	void printPhysiotherapy(int)const;
 	void getFreeHours()const;
 
