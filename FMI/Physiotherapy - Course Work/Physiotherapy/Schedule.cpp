@@ -8,6 +8,10 @@ Schedule::Schedule(){
 	size = 0;
 	capacity = 1;
 	physiotherapies = new Physiotherapy[capacity];
+	for (int i = 0; i < hours; i++)
+	{
+		freeHours[i] = false;
+	}
 }
 Schedule::~Schedule(){
 	delete[] physiotherapies;
@@ -36,25 +40,39 @@ Schedule::Schedule(const Schedule& other){
 }
 
 void Schedule::printObjectsAndMaxObjects()const{
+	cout << endl;
 	cout << "Objects : " << this->size << endl;
 	cout << "Max objects : " << this->MAX_CAPACITY << endl;
 }
 
 void Schedule::printPhysiotherapy(int index)const{
+	cout << endl;
 	cout << "Physiotherapy " << index << endl;
 	physiotherapies[index].printPhysiotherapy();
 	cout << endl;
 }
 
 
-//void Schedule::getFreeHours()const{
-//	for (int i = 9; i < 19; i++)
-//	{
-//		if (i )
-//	}
-//}
+void Schedule::getFreeHours()const{
+	cout << endl;
+	cout << "||| Time table |||" << endl;
+	bool isFull = true;
+	for (int i = 0; i < hours; i++)
+	{
+		if (freeHours[i] == false)
+		{
+			cout << "Free hour: " << i + hours << ":00 " << endl;
+			isFull = false;
+		}
+	}
+	if (isFull == true)
+	{
+		cout << "Schedule for today is full!!!" << endl;
+	}
+}
 
 void Schedule::setPhysiotherapy(int index, char* name, double price, int duration, int startTime){
+	cout << endl;
 	cout << "You changed physiotherapy!" << endl;
 	physiotherapies[index].setName(name);
 	physiotherapies[index].setPrice(price);
@@ -72,14 +90,33 @@ void Schedule::addPhysiotherapy(const Physiotherapy& newPhysio){
 		}
 		delete[] old;
 	}
+
+	if (freeHours[newPhysio.getStartTime() - hours] == false){
+		for (int j = 1; j < newPhysio.getDuration(); j++)
+		{
+			if (freeHours[newPhysio.getStartTime() + j - hours] != false){
+				cout << endl << "Sorry, this hour is not free!" << newPhysio.getStartTime() << endl;
+				throw invalid_argument("Sorry, this hour is not free!");
+			}
+			else{
+				freeHours[newPhysio.getStartTime() - hours + j] = true;
+			}
+		}
+	}
+	else{
+		cout << endl << "Sorry, this hour is not free!  " << newPhysio.getStartTime() << endl;
+		throw invalid_argument("Sorry, this hour is not free!");
+	}
+	freeHours[newPhysio.getStartTime() - hours] = true;
 	physiotherapies[size++] = newPhysio;
+
 }
 
 int main(){
 	cout << "Working hours: 9:00 - 18:00" << endl;
 	Physiotherapy newPhysio0("Pesho", 10, 1, 9);
-	Physiotherapy newPhysio1("Gosho", 10, 1, 10);
-	Physiotherapy newPhysio2("Stamat", 10, 1, 11);
+	Physiotherapy newPhysio1("Stamat", 10, 1, 10);
+	Physiotherapy newPhysio2("Gosho", 10, 1, 11);
 	Physiotherapy newPhysio3("Ivan", 10, 1, 12);
 	Physiotherapy newPhysio4("Kotanges", 10, 1, 13);
 	Physiotherapy newPhysio5("Tanges", 10, 1, 14);
@@ -88,8 +125,10 @@ int main(){
 	Physiotherapy newPhysio8("Petran", 10, 1, 17);
 
 	Schedule today;
+
 	today.addPhysiotherapy(newPhysio0);
 	today.addPhysiotherapy(newPhysio1);
+	today.getFreeHours();
 	today.addPhysiotherapy(newPhysio2);
 	today.addPhysiotherapy(newPhysio3);
 	today.addPhysiotherapy(newPhysio4);
@@ -98,8 +137,7 @@ int main(){
 	today.addPhysiotherapy(newPhysio7);
 	today.addPhysiotherapy(newPhysio8);
 	
-	today.setPhysiotherapy(0, "Change", 15, 2, 11);
-	today.printPhysiotherapy(0);
-	cout << endl;
 	today.printObjectsAndMaxObjects();
+
+	today.getFreeHours();
 }

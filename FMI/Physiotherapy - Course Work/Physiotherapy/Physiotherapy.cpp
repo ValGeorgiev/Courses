@@ -73,6 +73,7 @@ int Physiotherapy::getStartTime()const{
 
 
 void Physiotherapy::printPhysiotherapy()const{
+	cout << endl;
 	cout << "Name : " << getName() << endl;
 	cout << "Price : " << getPrice() << endl;
 	cout << "Duration : " << getDuration() << endl;

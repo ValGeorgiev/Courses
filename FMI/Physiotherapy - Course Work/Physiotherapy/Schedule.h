@@ -8,7 +8,9 @@ private:
 	Physiotherapy* physiotherapies;
 	int size;
 	int capacity;
-	const int MAX_CAPACITY = 200;
+	static const int MAX_CAPACITY = 200;
+	static const int hours = 9;
+	bool freeHours[9];
 public:
 	Schedule();
 	~Schedule();
