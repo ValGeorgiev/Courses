@@ -1,7 +1,9 @@
 #include<iostream>
 #include<cassert>
+#include<fstream>
 #include "Physiotherapy.h"
 using namespace std;
+
 
 void Physiotherapy::cpy(char* name, double price, int duration, int startTime){
 	size_t len = strlen(name) + 1;
@@ -73,9 +75,13 @@ int Physiotherapy::getStartTime()const{
 
 
 void Physiotherapy::printPhysiotherapy()const{
-	cout << endl;
-	cout << "Name : " << getName() << endl;
-	cout << "Price : " << getPrice() << endl;
-	cout << "Duration : " << getDuration() << endl;
-	cout << "Start time : " << getStartTime() << endl;
+
+	ofstream myFile;
+	myFile.open("Schedule.txt", ios::app);
+	myFile << "Name : " << getName() << endl;
+	myFile << "Price : " << getPrice() << endl;
+	myFile << "Duration : " << getDuration() << ":00 " << endl;
+	myFile << "Start time : " << getStartTime() << ":00 " << endl;
+	
+
 }

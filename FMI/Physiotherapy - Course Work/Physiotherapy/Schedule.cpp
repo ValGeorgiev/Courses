@@ -1,8 +1,9 @@
 #include<iostream>
+#include<fstream>
 #include "Schedule.h"
-
 using namespace std;
 
+ofstream myFile;
 
 Schedule::Schedule(){
 	size = 0;
@@ -40,47 +41,66 @@ Schedule::Schedule(const Schedule& other){
 }
 
 void Schedule::printObjectsAndMaxObjects()const{
-	cout << endl;
-	cout << "Objects : " << this->size << endl;
-	cout << "Max objects : " << this->MAX_CAPACITY << endl;
+	
+
+
+	myFile << endl;
+	myFile << "Objects : " << this->size << endl;
+	myFile << "Max objects : " << this->MAX_CAPACITY << endl;
+
+
 }
 
 void Schedule::printPhysiotherapy(int index)const{
-	cout << endl;
-	cout << "Physiotherapy " << index << endl;
+	
+
+	myFile << endl;
+	myFile << "Physiotherapy " << index << endl;
 	physiotherapies[index].printPhysiotherapy();
-	cout << endl;
+	myFile << endl;
+
+
 }
 
 
 void Schedule::getFreeHours()const{
-	cout << endl;
-	cout << "||| Time table |||" << endl;
+
+	myFile << endl;
+	myFile << "||| Time table |||" << endl;
 	bool isFull = true;
 	for (int i = 0; i < hours; i++)
 	{
 		if (freeHours[i] == false)
 		{
-			cout << "Free hour: " << i + hours << ":00 " << endl;
+			myFile << "Free hour: " << i + hours << ":00 " << endl;
 			isFull = false;
 		}
 	}
 	if (isFull == true)
 	{
-		cout << "Schedule for today is full!!!" << endl;
+		myFile << "Schedule for today is full!!!" << endl;
+		myFile << endl;
 	}
+	
+
 }
 
 void Schedule::setPhysiotherapy(int index, char* name, double price, int duration, int startTime){
-	cout << endl;
-	cout << "You changed physiotherapy!" << endl;
+	
+	
+	myFile << endl;
+	myFile << "You changed physiotherapy!" << endl;
 	physiotherapies[index].setName(name);
 	physiotherapies[index].setPrice(price);
 	physiotherapies[index].setDuration(duration);
 	physiotherapies[index].setStartTime(startTime);
 
+	
 }
+
 void Schedule::addPhysiotherapy(const Physiotherapy& newPhysio){
+	
+	
 	if (size == capacity){
 		capacity *= 2;
 		Physiotherapy* old = physiotherapies;
@@ -95,7 +115,7 @@ void Schedule::addPhysiotherapy(const Physiotherapy& newPhysio){
 		for (int j = 1; j < newPhysio.getDuration(); j++)
 		{
 			if (freeHours[newPhysio.getStartTime() + j - hours] != false){
-				cout << endl << "Sorry, this hour is not free!" << newPhysio.getStartTime() << endl;
+				myFile << endl << "Sorry, this hour is not free!" << newPhysio.getStartTime() << endl;
 				throw invalid_argument("Sorry, this hour is not free!");
 			}
 			else{
@@ -104,22 +124,27 @@ void Schedule::addPhysiotherapy(const Physiotherapy& newPhysio){
 		}
 	}
 	else{
-		cout << endl << "Sorry, this hour is not free!  " << newPhysio.getStartTime() << endl;
+		myFile << endl << "Sorry, this hour is not free!  " << newPhysio.getStartTime() << endl;
 		throw invalid_argument("Sorry, this hour is not free!");
 	}
 	freeHours[newPhysio.getStartTime() - hours] = true;
 	physiotherapies[size++] = newPhysio;
-
+	
 }
 
 int main(){
-	cout << "Working hours: 9:00 - 18:00" << endl;
+
+	myFile.open("Schedule.txt", ios::app);
+
+
+
+	myFile << "Working hours: 9:00 - 18:00" << endl;
 	Physiotherapy newPhysio0("Pesho", 10, 1, 9);
 	Physiotherapy newPhysio1("Stamat", 10, 1, 10);
 	Physiotherapy newPhysio2("Gosho", 10, 1, 11);
 	Physiotherapy newPhysio3("Ivan", 10, 1, 12);
-	Physiotherapy newPhysio4("Kotanges", 10, 1, 13);
-	Physiotherapy newPhysio5("Tanges", 10, 1, 14);
+	Physiotherapy newPhysio4("Petkan", 10, 1, 13);
+	Physiotherapy newPhysio5("Marian", 10, 1, 14);
 	Physiotherapy newPhysio6("Mariika", 10, 1, 15);
 	Physiotherapy newPhysio7("Ivanka", 10, 1, 16);
 	Physiotherapy newPhysio8("Petran", 10, 1, 17);
@@ -139,5 +164,9 @@ int main(){
 	
 	today.printObjectsAndMaxObjects();
 
-	today.getFreeHours();
+	today.setPhysiotherapy(2, "Georgi", 10000, 1, 11);
+	today.printPhysiotherapy(2);
+	//today.getFreeHours();
+	myFile.close();
+
 }

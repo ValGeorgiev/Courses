@@ -1,6 +1,7 @@
 #ifndef Schedule_H
 #define Schedule_H
 
+#include<fstream>
 #include "Physiotherapy.h"
 
 class Schedule{
