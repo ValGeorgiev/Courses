@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="_8Lecture_HomeWork.HeavyElement">
+    <Position X="5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAgAAAAEAAAAAA=</HashCode>
+      <FileName>HeavyElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_8Lecture_HomeWork.Line">
+    <Position X="8.75" Y="4" Width="1.5" />
+    <InheritanceLine Type="_8Lecture_HomeWork.Point" FixedToPoint="true">
+      <Path>
+        <Point X="8.25" Y="3.953" />
+        <Point X="8.49" Y="3.953" />
+        <Point X="8.49" Y="3.76" />
+        <Point X="9.375" Y="3.76" />
+        <Point X="9.375" Y="4" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAEAAAAAAAAAQAAAAEAAAAAEEAAAAA=</HashCode>
+      <FileName>Line.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_8Lecture_HomeWork.MainClass" Collapsed="true">
+    <Position X="5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>MainClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_8Lecture_HomeWork.Point">
+    <Position X="6.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAABgEAAAYAA=</HashCode>
+      <FileName>Point.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
