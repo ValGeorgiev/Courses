@@ -63,6 +63,34 @@ void bubbleSort(int arr[], int size) {
 	print(arr, size);
 }
 
+int partition(int arr[], int left, int right) {
+	int pivot = arr[right];
+	int i = left;
+	for (int j = left; j < right; j++)
+	{
+		if (arr[j] <= pivot)
+		{
+			int tmp = arr[j];
+			arr[j] = arr[i];
+			arr[i] = tmp;
+			i++;
+		}
+	}
+	int tmp = arr[i];
+	arr[i] = arr[right];
+	arr[right] = tmp;
+	return i;
+}
+
+void quickSort(int arr[], int left, int right) {
+	if (left < right)
+	{
+		int p = partition(arr, left, right);
+		quickSort(arr, left, p - 1);
+		quickSort(arr, p + 1, right);
+	}	
+}
+
 
 int main() {
 	int arr[] = { 5,2,3,1,7,4,12,0,10 };
@@ -71,4 +99,8 @@ int main() {
 	//insertionSort(arr, size);
 	//selectionSort(arr, size);
 	//bubbleSort(arr, size);
+	
+	/*quickSort(arr, 0, size - 1);
+	print(arr, size);*/
+
 }
