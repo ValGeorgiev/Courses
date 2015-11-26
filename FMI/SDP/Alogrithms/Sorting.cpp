@@ -8,6 +8,7 @@ void print(int arr[], int size) {
 	}
 }
 
+/*-----------Insertion--Sort----------*/
 void insertionSort(int arr[], int size) {
 	int j, i;
 	for (i = 1; i < size; i++)
@@ -25,6 +26,7 @@ void insertionSort(int arr[], int size) {
 
 }
 
+/*-----------Selection--Sort----------*/
 void selectionSort(int arr[], int size) {
 	int min = 0;
 	int minIndex = 0;
@@ -47,6 +49,8 @@ void selectionSort(int arr[], int size) {
 	print(arr, size);
 }
 
+
+/*-----------Bubble--Sort----------*/
 void bubbleSort(int arr[], int size) {
 	for (int j = 0; j < size; j++)
 	{
@@ -63,6 +67,8 @@ void bubbleSort(int arr[], int size) {
 	print(arr, size);
 }
 
+
+/*-----------Quick--Sort----------*/
 int partition(int arr[], int left, int right) {
 	int pivot = arr[right];
 	int i = left;
@@ -92,6 +98,39 @@ void quickSort(int arr[], int left, int right) {
 }
 
 
+/*-----------Heap--Sort----------*/
+void heapify(int* arr, int left, int right)
+{
+	int i = left,
+		j = i + i;
+	int x = arr[i];
+	while (j <= right) {
+		if (j < right && arr[j] < arr[j + 1]) {
+			j++;
+		}
+		if (x >= arr[j]) {
+			break;
+		}
+		arr[i] = arr[j];
+		i = j;
+		j <<= 1; /* ???????????? ?? j *= 2; */
+	}
+	arr[i] = x;
+}
+void heapSort(int* arr, int n) {
+	int i;
+	for (i = n/2 + 1; i > 0; i--)
+	{
+		heapify(arr, i - 1, n);
+	}
+	for (i = n; i > 0; i--)
+	{
+		int tmp = arr[i];
+		arr[i] = arr[0];
+		arr[0] = tmp;
+		heapify(arr, 0, i - 1);
+	}
+}
 int main() {
 	int arr[] = { 5,2,3,1,7,4,12,0,10 };
 	int size = 9;
@@ -103,4 +142,6 @@ int main() {
 	/*quickSort(arr, 0, size - 1);
 	print(arr, size);*/
 
+	heapSort(arr, size - 1);
+	print(arr, size);
 }
