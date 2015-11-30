@@ -87,7 +87,6 @@ int partition(int arr[], int left, int right) {
 	arr[right] = tmp;
 	return i;
 }
-
 void quickSort(int arr[], int left, int right) {
 	if (left < right)
 	{
@@ -131,9 +130,44 @@ void heapSort(int* arr, int n) {
 		heapify(arr, 0, i - 1);
 	}
 }
+
+/*------Counting--Sort--------*/
+void countingSort(int* arr, int size) {
+	int max = -INFINITY;
+	for (int i = 0; i < size; i++)
+	{
+		if (arr[i] > max)
+		{
+			max = arr[i];
+		}
+	}
+	cout << "Max : " << max << endl;
+	int newSize = max + 1;
+	int* newArr = new int[newSize];
+	
+	for (int i = 0; i < newSize; i++)
+	{
+		newArr[i] = 0;
+	}
+
+	for (int i = 0; i < size; i++)
+	{
+		newArr[arr[i]]++;
+	}
+	for (int i = 0; i < newSize; i++)
+	{
+		while (newArr[i] != 0)
+		{
+			cout << i << endl;
+			newArr[i]--;
+		}
+	}
+
+}
+
 int main() {
-	int arr[] = { 5,2,3,1,7,4,12,0,10 };
-	int size = 9;
+	int arr[] = { 5,2,5,2,5,2,5,2,3,1,7,4,12,0,10 };
+	int size = 15;
 
 	//insertionSort(arr, size);
 	//selectionSort(arr, size);
@@ -142,6 +176,8 @@ int main() {
 	/*quickSort(arr, 0, size - 1);
 	print(arr, size);*/
 
-	heapSort(arr, size - 1);
-	print(arr, size);
+	//heapSort(arr, size - 1);
+	//print(arr, size);
+
+	//countingSort(arr, size);
 }
